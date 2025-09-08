@@ -35,7 +35,50 @@ https://www.tooplate.com/view/2139-neural-portfolio
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+        /* Container to hold the buttons inside the project card */
+.project-card-buttons {
+    margin-top: 20px; /* Adds space below the description */
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 15px;      /* Adds space between the buttons */
+}
 
+/* Base style for the new card buttons */
+.card-btn {
+    font-family: 'Audiowide', sans-serif;
+    padding: 8px 18px;
+    border: 2px solid var(--primary); /* Cyan border */
+    border-radius: 50px;
+    color: var(--primary);            /* Cyan text */
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* --- Hover Effect --- */
+.card-btn:hover {
+    background-color: var(--primary);       /* Fill with cyan on hover */
+    color: var(--bg-dark);                  /* Dark text for contrast */
+    box-shadow: 0 0 15px var(--primary);    /* Add a cyan glow */
+    transform: translateY(-3px);            /* Lift the button slightly */
+}
+
+/* Modifier class for the accent 'Register' button */
+.card-btn.btn-accent {
+    border-color: var(--secondary); /* Magenta border */
+    color: var(--secondary);        /* Magenta text */
+}
+
+/* Hover effect for the accent 'Register' button */
+.card-btn.btn-accent:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    box-shadow: 0 0 15px var(--secondary); /* Add a magenta glow */
+}
         body::before {
             content: '';
             position: fixed;
