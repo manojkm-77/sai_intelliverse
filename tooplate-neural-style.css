@@ -72,7 +72,107 @@ https://www.tooplate.com/view/2139-neural-portfolio
     border-color: var(--secondary); /* Magenta border */
     color: var(--secondary);        /* Magenta text */
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
 
+.event {
+  text-align: center;
+}
+
+.event-title {
+  font-size: 2rem;
+  color: #00e0ff;
+}
+
+.event-subtitle {
+  margin: 10px 0 20px;
+  color: #aaa;
+}
+
+.btn {
+  background: #ff0055;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff3366;
+}
+
+/* Popup styles */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+  background: #1a1a1a;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 0 25px rgba(255, 0, 85, 0.7);
+  animation: slideDown 0.4s ease-in-out;
+}
+
+.popup h2 {
+  color: #ff0055;
+  margin-top: 0;
+}
+
+.popup p {
+  margin: 8px 0;
+}
+
+.close-btn {
+  background: #ff0055;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background: #ff3366;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 /* Hover effect for the accent 'Register' button */
 .card-btn.btn-accent:hover {
     background-color: var(--secondary);
