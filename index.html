@@ -114,7 +114,45 @@ Tooplate saiintelliverse Portfolio
     <p style="color: var(--text-secondary);">24-HOUR HACKATHON</p>
     
     <div class="project-card-buttons">
-        <a href="#" class="card-btn">Know More</a>
+    <button class="btn know-more" id="openPopup">Know More</button>
+  </section>
+
+  <!-- Popup -->
+  <div id="eventPopup" class="popup">
+    <div class="popup-content">
+      <h2>Pic-Linc</h2>
+      <p><strong>Venue:</strong> Sri Sairam Engineering College</p>
+      <p><strong>Date:</strong> 17-09-2025</p>
+      <p><strong>Time:</strong> 10:00 AM</p>
+      <p><strong>Duration:</strong> 2 Hours</p>
+      <p><strong>Prerequisites:</strong> Confirmation Mail, College ID Card, EZ Buzz84 App</p>
+      <p><strong>Event Coordinator:</strong> Prasanna Vijay, Sindhil V</p>
+      <p><strong>Contact:</strong> 9890233233</p>
+      <button class="close-btn" id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById("openPopup");
+    const closeBtn = document.getElementById("closePopup");
+    const popup = document.getElementById("eventPopup");
+
+    openBtn.addEventListener("click", () => {
+      popup.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    // Close popup when clicking outside content
+    window.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  </script>
+
         <a href="#" class="card-btn btn-accent">Register</a>
     </div>
 </div>
@@ -239,6 +277,7 @@ Tooplate saiintelliverse Portfolio
 </body>
 
 </html>
+
 
 
 
