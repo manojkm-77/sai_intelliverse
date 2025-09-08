@@ -5,16 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terra Quest Details</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .event-container {
+            display: flex;
+            flex-direction: row;
+            background: rgba(20, 20, 20, 0.85);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+            max-width: 900px;
+            width: 95%;
+        }
+        .event-image {
+            flex: 1;
+            background: url('terra-quest.jpg') center/cover no-repeat;
+            min-height: 400px;
+        }
+        .event-info {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(145deg, #111, #222);
+        }
+        .event-info h1 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+        }
+        .event-meta {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0 20px;
+        }
+        .meta-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        .meta-card strong {
+            display: block;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        .meta-card span {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .event-details p {
+            margin: 8px 0;
+            font-size: 0.95rem;
+            line-height: 1.4rem;
+        }
+        .prerequisites {
+            margin-top: 10px;
+        }
+        .prerequisites li {
+            list-style: none;
+            margin: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        .prerequisites li::before {
+            content: "•";
+            color: red;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .register-btn {
+            margin-top: 20px;
+            background: #e63946;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 10px;
+            display: inline-block;
+            transition: 0.3s ease;
+        }
+        .register-btn:hover {
+            background: #ff4757;
+            transform: scale(1.05);
+        }
+        @media(max-width: 768px) {
+            .event-container {
+                flex-direction: column;
+            }
+            .event-image {
+                min-height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section class="event-details">
-        <h1>Terra Quest</h1>
-        <p><strong>Date:</strong> 17-09-2025</p>
-        <p><strong>Time:</strong> 10:00 AM</p>
-        <p><strong>Venue:</strong> Sri Sairam Engineering College</p>
-        <p><strong>Duration:</strong> 24 hours</p>
-        <p><strong>Description:</strong> Join this exciting 24-hour hackathon and build innovative solutions.</p>
-        <a href="register.html" class="btn register">Register Now</a>
-    </section>
+    <div class="event-container">
+        <div class="event-image"></div>
+        <div class="event-info">
+            <h1>Terra Quest</h1>
+            <div class="event-meta">
+                <div class="meta-card">
+                    <strong>Date</strong>
+                    <span>17-09-2025</span>
+                </div>
+                <div class="meta-card">
+                    <strong>Time</strong>
+                    <span>10:00 AM</span>
+                </div>
+            </div>
+            <div class="event-details">
+                <p><strong>Coordinator:</strong> Prasanna Vijay, Srinidhi V</p>
+                <p><strong>Contact:</strong> 9962733233</p>
+                <p><strong>Venue:</strong> Sri Sairam Engineering College</p>
+                <p><strong>Duration:</strong> 24 hours</p>
+                <p><strong>Description:</strong> Join this exciting 24-hour hackathon and build innovative solutions that solve real-world problems using AI, IoT, and creativity.</p>
+                <div class="prerequisites">
+                    <strong>Prerequisites:</strong>
+                    <ul>
+                        <li>Confirmation Mail</li>
+                        <li>College ID Card</li>
+                        <li>Laptop + Charger</li>
+                    </ul>
+                </div>
+                <a href="register.html" class="register-btn">Register Now</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
