@@ -28,8 +28,13 @@
         }
         .event-image {
             flex: 1;
-            background: url('terra-quest.jpg') center/cover no-repeat;
             min-height: 400px;
+        }
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         .event-info {
             flex: 1;
@@ -109,10 +114,12 @@
             }
         }
     </style>
-</head>terra-quest.jpg
+</head>
 <body>
     <div class="event-container">
-        <div class="event-image"></div>
+        <div class="event-image">
+            <img src="terra-quest.jpg" alt="Terra Quest Hackathon Poster">
+        </div>
         <div class="event-info">
             <h1>Terra Quest</h1>
             <div class="event-meta">
@@ -126,7 +133,7 @@
                 </div>
             </div>
             <div class="event-details">
-                <p><strong>Coordinator:</strong>Harshavrdhan,sylesh,manoj</p>
+                <p><strong>Coordinator:</strong> Harshavrdhan, Sylesh, Manoj</p>
                 <p><strong>Contact:</strong> 9962733233</p>
                 <p><strong>Venue:</strong> Sri Sairam Engineering College</p>
                 <p><strong>Duration:</strong> 24 hours</p>
